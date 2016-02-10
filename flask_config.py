@@ -80,12 +80,17 @@ class InpsyghtConfig(BaseConfig):
         {
             'min-length-bp': 0,
             'max-length-bp': 5000,
-            'path': {str(chrom): '/var/browser_coverage/inpsyght/full/{chrom}.inpsyght.coverage.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
+            'path': {str(chrom): '/var/browser_coverage/inpsyght_v1/full/{chrom}.inpsyght.coverage.full.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
         },
         {
             'min-length-bp': 5000,
+            'max-length-bp': 10000,
+            'path': {str(chrom): '/var/browser_coverage/inpsyght_v1/bin_25e-2/{chrom}.inpsyght.coverage.bin_25e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
+        },
+        {
+            'min-length-bp': 10000,
             'max-length-bp': sys.maxint,
-            'path': {str(chrom): '/var/browser_coverage/inpsyght/bins/{chrom}.inpsyght.coverage.bins.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
+            'path': {str(chrom): '/var/browser_coverage/inpsyght_v1/bin_50e-2/{chrom}.inpsyght.coverage.bin_50e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
         },
     ]
 

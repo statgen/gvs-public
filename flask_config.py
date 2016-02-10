@@ -66,7 +66,7 @@ class BravoConfig(BaseConfig):
     DBSNP_FILE=os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbsnp144.txt.bgz')
 
 class InpsyghtConfig(BaseConfig):
-    BROWSER_NAME = 'InPSYght'
+    BROWSER_NAME = 'InPSYght Variant Browser'
     DATASET_NAME = 'InPSYght'
     NUM_SAMPLES = 735
 

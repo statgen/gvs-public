@@ -65,6 +65,13 @@ class BravoConfig(BaseConfig):
     #   tabix -s 2 -b 3 -e 3 dbsnp142.txt.bgz
     DBSNP_FILE=os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbsnp144.txt.bgz')
 
+    EMAIL_WHITELIST = [
+        # Developers
+        "pjvh@umich.edu",
+    ]
+    EMAIL_WHITELIST = [email.lower() for email in EMAIL_WHITELIST]
+
+
 class InpsyghtConfig(BaseConfig):
     BROWSER_NAME = 'InPSYght Variant Browser'
     DATASET_NAME = 'InPSYght'
@@ -112,3 +119,9 @@ class InpsyghtConfig(BaseConfig):
     #   zcat b142_SNPChrPosOnRef_105.bcp.gz | awk '$3 != ""' | perl -pi -e 's/ +/\t/g' | sort -k2,2 -k3,3n | bgzip -c > dbsnp142.txt.bgz
     #   tabix -s 2 -b 3 -e 3 dbsnp142.txt.bgz
     DBSNP_FILE=os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbsnp144.txt.bgz')
+
+    EMAIL_WHITELIST = [
+        # Developers
+        "pjvh@umich.edu",
+    ]
+    EMAIL_WHITELIST = [email.lower() for email in EMAIL_WHITELIST]

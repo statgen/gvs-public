@@ -17,10 +17,7 @@ class BaseConfig(object):
 
     ADMINS = [
         'pjvh@umich.edu',
-        'dtaliun@umich.edu',
     ]
-
-    ONLY_PASS_VARIANTS = False
 
     LOAD_DB_PARALLEL_PROCESSES = 8
 
@@ -29,6 +26,9 @@ class BravoConfig(BaseConfig):
     DATASET_NAME = 'TOPMED'
     release = 'freeze2'
     NUM_SAMPLES = 6015
+
+    SHOW_POWERED_BY = True
+    ONLY_PASS_VARIANTS = False
 
     MONGO = {
         'host': 'localhost',
@@ -69,6 +69,9 @@ class InpsyghtConfig(BaseConfig):
     BROWSER_NAME = 'InPSYght Variant Browser'
     DATASET_NAME = 'InPSYght'
     NUM_SAMPLES = 735
+
+    SHOW_POWERED_BY = False
+    ONLY_PASS_VARIANTS = True
 
     MONGO = {
         'host': 'localhost',

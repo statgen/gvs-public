@@ -27,6 +27,8 @@ class BravoConfig(BaseConfig):
     release = 'freeze2'
     NUM_SAMPLES = 6015
 
+    GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-2'
+
     SHOW_POWERED_BY = True
     ONLY_PASS_VARIANTS = False
 
@@ -71,11 +73,15 @@ class BravoConfig(BaseConfig):
     ]
     EMAIL_WHITELIST = [email.lower() for email in EMAIL_WHITELIST]
 
+class BravoTestConfig(BravoConfig):
+    GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-1'
 
 class InpsyghtConfig(BaseConfig):
     BROWSER_NAME = 'InPSYght Variant Browser'
     DATASET_NAME = 'InPSYght'
     NUM_SAMPLES = 735
+
+    GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-3'
 
     SHOW_POWERED_BY = False
     ONLY_PASS_VARIANTS = True
@@ -125,3 +131,6 @@ class InpsyghtConfig(BaseConfig):
         "pjvh@umich.edu",
     ]
     EMAIL_WHITELIST = [email.lower() for email in EMAIL_WHITELIST]
+
+class InpsyghtTestConfig(InpsyghtConfig):
+    GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-1'

@@ -30,7 +30,6 @@ class BravoConfig(BaseConfig):
     GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-2'
 
     SHOW_POWERED_BY = True
-    ONLY_PASS_VARIANTS = False
 
     MONGO = {
         'host': 'localhost',
@@ -84,7 +83,6 @@ class InpsyghtConfig(BaseConfig):
     GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-3'
 
     SHOW_POWERED_BY = False
-    ONLY_PASS_VARIANTS = True
 
     MONGO = {
         'host': 'localhost',

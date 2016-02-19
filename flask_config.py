@@ -23,7 +23,7 @@ class BaseConfig(object):
 
 class BravoConfig(BaseConfig):
     BROWSER_NAME = 'Bravo'
-    DATASET_NAME = 'TOPMED'
+    DATASET_NAME = 'TOPMed'
     release = 'freeze2'
     NUM_SAMPLES = 6015
 

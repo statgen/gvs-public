@@ -74,6 +74,8 @@ class BravoConfig(BaseConfig):
 
 class BravoTestConfig(BravoConfig):
     GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-1'
+    BROWSER_NAME = 'Internal Bravo'
+
 
 class InpsyghtConfig(BaseConfig):
     BROWSER_NAME = 'InPSYght Variant Browser'

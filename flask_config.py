@@ -45,8 +45,13 @@ class BravoConfig(BaseConfig):
         },
         {
             'min-length-bp': 5000,
-            'max-length-bp': sys.maxint,
+            'max-length-bp': 50000,
             'path': {str(chrom): '/var/browser_coverage/topmed_freeze2_random1000/bin_25e-2/{chrom}.topmed_freeze2.coverage.bin_25e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
+        },
+        {
+            'min-length-bp': 50000,
+            'max-length-bp': sys.maxint,
+            'path': {str(chrom): '/var/browser_coverage/topmed_freeze2_random1000/bin_50e-2/{chrom}.topmed_freeze2.coverage.bin_50e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
         },
     ]
 

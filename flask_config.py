@@ -57,10 +57,10 @@ class BravoConfig(BaseConfig):
 
     _FILES_DIRECTORY = '/var/imported/topmed_freeze2'
     SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'ALL.polymorphic.topmed_freeze2.vcf.gz')),
-    GENCODE_GTF = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'gencode.gtf.gz'),
-    CANONICAL_TRANSCRIPT_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'canonical_transcripts.txt.gz'),
-    OMIM_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'omim_info.txt.gz'),
-    BASE_COVERAGE_FILES = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'coverage', 'Panel.*.coverage.txt.gz')),
+    GENCODE_GTF = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'gencode.gtf.gz')
+    CANONICAL_TRANSCRIPT_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'canonical_transcripts.txt.gz')
+    OMIM_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'omim_info.txt.gz')
+    DBNSFP_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbNSFP2.6_gene.gz')
     # How to get a snp141.txt.bgz file:
     #   wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/snp141.txt.gz
     #   zcat snp141.txt.gz | cut -f 1-5 | bgzip -c > snp141.txt.bgz
@@ -116,11 +116,11 @@ class InpsyghtConfig(BaseConfig):
     ]
 
     _FILES_DIRECTORY = '/var/imported/inpsyght'
-    SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'ALL.polymorphic.topmed_freeze2.vcf.gz')),
-    GENCODE_GTF = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'gencode.gtf.gz'),
-    CANONICAL_TRANSCRIPT_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'canonical_transcripts.txt.gz'),
-    OMIM_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'omim_info.txt.gz'),
-    BASE_COVERAGE_FILES = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'coverage', 'Panel.*.coverage.txt.gz')),
+    SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'inpsyght.ALL.PASS.sites.VEP82.CADD.DP_GQ_HOMS.vcf.gz')),
+    GENCODE_GTF = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'gencode.gtf.gz')
+    CANONICAL_TRANSCRIPT_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'canonical_transcripts.txt.gz')
+    OMIM_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'omim_info.txt.gz')
+    DBNSFP_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbNSFP2.6_gene.gz')
     # How to get a snp141.txt.bgz file:
     #   wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/snp141.txt.gz
     #   zcat snp141.txt.gz | cut -f 1-5 | bgzip -c > snp141.txt.bgz

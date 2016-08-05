@@ -58,7 +58,7 @@ class BravoConfig(BaseConfig):
     ]
 
     _FILES_DIRECTORY = '/var/imported/topmed_freeze2'
-    SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'ALL.polymorphic.topmed_freeze2.vcf.gz')),
+    SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'ALL.polymorphic.topmed_freeze2.vcf.gz'))
     GENCODE_GTF = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'gencode.gtf.gz')
     CANONICAL_TRANSCRIPT_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'canonical_transcripts.txt.gz')
     OMIM_FILE = os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'omim_info.txt.gz')

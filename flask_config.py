@@ -3,6 +3,7 @@
 import sys
 import os.path
 import glob
+import whitelist_topmed
 import whitelist_topmed_devs
 import whitelist_inpsyght
 
@@ -73,11 +74,12 @@ class BravoConfig(BaseConfig):
     #   tabix -s 2 -b 3 -e 3 dbsnp142.txt.bgz
     DBSNP_FILE=os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbsnp144.txt.bgz')
 
-    EMAIL_WHITELIST = [l.strip().lower() for l in whitelist_topmed_devs.whitelist.split('\n') if l.strip()]
+    EMAIL_WHITELIST = whitelist_topmed.whitelist
 
 class BravoTestConfig(BravoConfig):
     GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-1'
     BROWSER_NAME = 'Internal Bravo'
+    EMAIL_WHITELIST = whitelist_topmed_devs.whitelist
 
 
 class InpsyghtConfig(BaseConfig):
@@ -129,7 +131,7 @@ class InpsyghtConfig(BaseConfig):
     #   tabix -s 2 -b 3 -e 3 dbsnp142.txt.bgz
     DBSNP_FILE=os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'dbsnp144.txt.bgz')
 
-    EMAIL_WHITELIST = [l.strip().lower() for l in whitelist_inpsyght.whitelist.split('\n') if l.strip()]
+    EMAIL_WHITELIST = whitelist_inpsyght.whitelist
 
 class InpsyghtTestConfig(InpsyghtConfig):
     GOOGLE_ANALYTICS_TRACKING_ID = 'UA-73910830-1'

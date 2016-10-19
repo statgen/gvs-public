@@ -40,23 +40,56 @@ class BravoConfig(BaseConfig):
         'name': 'topmed_freeze2',
     }
 
-    BASE_COVERAGE = [
-        {
+    BASE_COVERAGE = []
+    for chrom in range(1,1+22):
+        BASE_COVERAGE.append({
+            'chrom': str(chrom),
             'min-length-bp': 0,
-            'max-length-bp': 5000,
-            'path': {str(chrom): '/var/browser_coverage/topmed_freeze2_random1000/full/{chrom}.topmed_freeze2.coverage.full.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
-        },
-        {
-            'min-length-bp': 5000,
-            'max-length-bp': 50000,
-            'path': {str(chrom): '/var/browser_coverage/topmed_freeze2_random1000/bin_25e-2/{chrom}.topmed_freeze2.coverage.bin_25e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
-        },
-        {
-            'min-length-bp': 50000,
+            'max-length-bp': 1000,
+            'path': '/var/browser_coverage/topmed_freeze2_random1000/full/{chrom}.topmed_freeze2.coverage.full.json.gz'.format(chrom=chrom),
+        })
+        BASE_COVERAGE.append({
+            'chrom': str(chrom),
+            'min-length-bp': 1000,
+            'max-length-bp': 10000,
+            'path': '/var/browser_coverage/topmed_freeze2_random1000/bin_25e-2/{chrom}.topmed_freeze2.coverage.bin_25e-2.json.gz'.format(chrom=chrom),
+        })
+        BASE_COVERAGE.append({
+            'chrom': str(chrom),
+            'min-length-bp': 10000,
             'max-length-bp': sys.maxint,
-            'path': {str(chrom): '/var/browser_coverage/topmed_freeze2_random1000/bin_50e-2/{chrom}.topmed_freeze2.coverage.bin_50e-2.json.gz'.format(chrom=chrom) for chrom in range(1,1+22)},
-        },
-    ]
+            'path': '/var/browser_coverage/topmed_freeze2_random1000/bin_50e-2/{chrom}.topmed_freeze2.coverage.bin_50e-2.json.gz'.format(chrom=chrom),
+        })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 0,
+        'max-length-bp': 1000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.full.json.gz'
+    })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 1000,
+        'max-length-bp': 10000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_25e-2.json.gz'
+    })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 10000,
+        'max-length-bp': 30000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_50e-2.json.gz'
+    })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 30000,
+        'max-length-bp': 100000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_75-2.json.gz'
+    })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 100000,
+        'max-length-bp': 300000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_1e-0.json.gz'
+    })
 
     _FILES_DIRECTORY = '/var/imported/topmed_freeze2'
     SITES_VCFS = glob.glob(os.path.join(os.path.dirname(__file__), _FILES_DIRECTORY, 'ALL.polymorphic.topmed_freeze2.vcf.gz'))

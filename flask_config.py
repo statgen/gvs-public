@@ -64,7 +64,7 @@ class BravoConfig(BaseConfig):
         'chrom': 'X',
         'min-length-bp': 0,
         'max-length-bp': 1000,
-        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.full.json.gz'
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.full2.json.gz' # original only went to 200k, not sure why.
     })
     BASE_COVERAGE.append({
         'chrom': 'X',
@@ -82,12 +82,12 @@ class BravoConfig(BaseConfig):
         'chrom': 'X',
         'min-length-bp': 30000,
         'max-length-bp': 100000,
-        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_75-2.json.gz'
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_75e-2.json.gz'
     })
     BASE_COVERAGE.append({
         'chrom': 'X',
         'min-length-bp': 100000,
-        'max-length-bp': 300000,
+        'max-length-bp': sys.maxint,
         'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_1e-0.json.gz'
     })
 

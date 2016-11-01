@@ -45,42 +45,42 @@ class BravoConfig(BaseConfig):
         BASE_COVERAGE.append({
             'chrom': str(chrom),
             'min-length-bp': 0,
-            'max-length-bp': 1000,
+            'max-length-bp': 300,
             'path': '/var/browser_coverage/topmed_freeze2_random1000/full/{chrom}.topmed_freeze2.coverage.full.json.gz'.format(chrom=chrom),
         })
         BASE_COVERAGE.append({
             'chrom': str(chrom),
-            'min-length-bp': 1000,
-            'max-length-bp': 10000,
+            'min-length-bp': 300,
+            'max-length-bp': 1000,
             'path': '/var/browser_coverage/topmed_freeze2_random1000/bin_25e-2/{chrom}.topmed_freeze2.coverage.bin_25e-2.json.gz'.format(chrom=chrom),
         })
         BASE_COVERAGE.append({
             'chrom': str(chrom),
-            'min-length-bp': 10000,
+            'min-length-bp': 1000,
             'max-length-bp': sys.maxint,
             'path': '/var/browser_coverage/topmed_freeze2_random1000/bin_50e-2/{chrom}.topmed_freeze2.coverage.bin_50e-2.json.gz'.format(chrom=chrom),
         })
     BASE_COVERAGE.append({
         'chrom': 'X',
         'min-length-bp': 0,
-        'max-length-bp': 1000,
+        'max-length-bp': 300,
         'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.full2.json.gz' # original only went to 200k, not sure why.
+    })
+    BASE_COVERAGE.append({
+        'chrom': 'X',
+        'min-length-bp': 300,
+        'max-length-bp': 1000,
+        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_25e-2.json.gz'
     })
     BASE_COVERAGE.append({
         'chrom': 'X',
         'min-length-bp': 1000,
         'max-length-bp': 10000,
-        'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_25e-2.json.gz'
-    })
-    BASE_COVERAGE.append({
-        'chrom': 'X',
-        'min-length-bp': 10000,
-        'max-length-bp': 30000,
         'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_50e-2.json.gz'
     })
     BASE_COVERAGE.append({
         'chrom': 'X',
-        'min-length-bp': 30000,
+        'min-length-bp': 10000,
         'max-length-bp': 100000,
         'path': '/var/browser_coverage/topmed_freeze3a_public_X/X.topmed_freeze2.coverage.bin_75e-2.json.gz'
     })
